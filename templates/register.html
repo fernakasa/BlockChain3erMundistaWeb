@@ -1,0 +1,63 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<!-- Contact-->
+<section class="page-section bg-dark" id="register">
+    <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-lg-8 col-xl-6 text-center">
+                <h2 class="mt-0 text-white">Registro Único de Documentación</h2>
+                <hr class="divider" />
+                <p class="text-muted mb-5">Ingrese los datos requeridos y el sistema generara el token de validación</p>
+            </div>
+        </div>
+        <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
+            <div class="col-lg-6">
+                <form action="{{url_for('registro')}}" method="POST" enctype="multipart/form-data" id="registerForm" class="was-validated">
+                    <!-- Email input-->
+                    <div class="form-floating mb-3">
+                        <input class="form-control" id="inputEmail" name="email" type="text" required/>
+                        <label for="inputEmail">Ingrese su email.</label>
+                        <div class="invalid-feedback">Un email es requerido.</div>
+                    </div>
+                    <!-- Choose input-->
+                    <div class="form-floating mb-3">
+                        <select class="form-select" id="inputChoose" name="motivo" required>
+                            <option selected disabled value="">Motivo...</option>
+                            <option>Certificado</option>
+                            <option>Otros</option>
+                        </select>
+                        <div class="invalid-feedback">Debe seleccionar una opción.</div>
+                    </div>
+                    <!-- File input-->
+                    <div class="form-floating mb-3">
+                        <input type="file" class="form-control" id="inputFile" name="archivo" aria-label="file example"
+                            required>
+                        <label for="inputFile">Seleccione el documento/archivo a registrar.</label>
+                        <div class="invalid-feedback">Seleccione un archivo.</div>
+                    </div>
+            </div>
+            <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
+                <div class="col-lg-6">
+                    <div class="d-none" id="submitSuccessMessage">
+                        <div class="text-center mb-3">
+                            <div class="fw-bolder">Form submission successful!</div>
+                        </div>
+                    </div>
+                    <!-- Submit error message-->
+                    <div class="d-none" id="submitErrorMessage">
+                        <div class="text-center text-danger mb-3">Error al enviar el mensaje!</div>
+                    </div>
+                    <!-- Submit Button-->
+                    <div class="d-grid">
+                        <button class="btn btn-primary btn-xl" id="submitButton" type="submit">Enviar</button>
+                    </div>
+                </div>
+            </div>
+            </form>
+        </div>
+    </div>
+    </div>
+</section>
+
+{% endblock %}

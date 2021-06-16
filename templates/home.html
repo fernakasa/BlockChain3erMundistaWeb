@@ -1,0 +1,106 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<header id="my-bg" class="masthead">
+    <div class="container px-4 px-lg-5 h-100">
+        <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
+            <div class="col-lg-8 align-self-end">
+                <h1 class="text-white font-weight-bold">Registro Único de Documentación</h1>
+                <hr class="divider" />
+            </div>
+            <div class="col-lg-8 align-self-baseline">
+                <p class="text-white-75 mb-5">El poder de la tecnologia de la BlockChain al alcance de todos</p>
+                <a class="btn btn-primary btn-xl" href="/#servicios">Descubrir!</a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section class="page-section bg-primary" id="servicios">
+    <div class="container px-4 px-lg-5">
+        <h2 class="text-center text-white mt-0">A tu Servicio</h2>
+        <hr class="divider divider-light" />
+        <div class="row gx-4 gx-lg-5">
+            <div class="col-lg-3 col-md-6 text-center">
+                <div class="mt-5">
+                    <div class="mb-2"><i class="bi-gem  fs-1 text-white"></i></div>
+                    <h3 class="h4 text-white mb-2">Hash</h3>
+                    <p class="text-white-75 mb-0">Te otorgaremos un hash único para ti, el cual, te servirá para consultar los detalles de tu registro.</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 text-center">
+                <div class="mt-5">
+                    <div class="mb-2"><i class="bi-laptop fs-1 text-white"></i></div>
+                    <h3 class="h4 text-white mb-2">Registro</h3>
+                    <p class="text-white-75 mb-0">Solo necesitaras tu email y el archivo que desea registrar.</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 text-center">
+                <div class="mt-5">
+                    <div class="mb-2"><i class="bi-globe fs-1 text-white"></i></div>
+                    <h3 class="h4 text-white mb-2">Validación</h3>
+                    <p class="text-white-75 mb-0">Cuando tengas tu código de validación, es tan fácil como hacer click en "Validar" y seguir los pasos.</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 text-center">
+                <div class="mt-5">
+                    <div class="mb-2"><i class="bi-heart fs-1 text-white"></i></div>
+                    <h3 class="h4 text-white mb-2">Hecho con amor</h3>
+                    <p class="text-white-75 mb-0">Para la Universidad de la Cuenca del Plata para la gestión y registro de certificados emitidos por docentes, alumnos, administrativos.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row gx-4 gx-lg-5 mt-5 mb-5 justify-content-center">
+            <div class="col-lg-8 text-center">
+                <a class="btn btn-light btn-xl" href="/registrar">Empezar!</a>
+            </div>
+        </div>
+        <hr class="divider mb-5 divider" />
+        <hr class="divider mb-5 divider" />
+    </div>
+</section>
+
+<section class="page-section" id="about">
+    <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-lg-8 text-center">
+                <img class="img-fluid" src="{{ url_for('static', filename='assets/img/ucp.png') }}" alt="..." />
+                <div class="card-group">
+                    <div class="card border-white ">
+                        <img class="avatar card-img-top mx-auto"
+                            src="{{ url_for('static', filename='assets/img/juandi.jpeg') }}" alt="Casco, Juan Diego">
+                        <div class="card-body">
+                            <h5 class="card-title">Casco, Juan Diego</h5>
+                        </div>
+                    </div>
+                    <div class="card border-white">
+                        <img class="avatar card-img-top mx-auto"
+                            src="{{ url_for('static', filename='assets/img/mili.png') }}" alt="Rojas, Milagros">
+                        <div class="card-body">
+                            <h5 class="card-title">Rojas, Milagros</h5>
+                        </div>
+                    </div>
+                    <div class="card border-white ">
+                        <img class="avatar card-img-top mx-auto"
+                            src="{{ url_for('static', filename='assets/img/fer.png') }}"
+                            alt="Sanchez, Fernando Gustavo">
+                        <div class="card-body">
+                            <h5 class="card-title">Sanchez, Fernando Gustavo</h5>
+                        </div>
+                    </div>
+                    <div class="card border-white ">
+                        <img class="avatar card-img-top mx-auto"
+                            src="{{ url_for('static', filename='assets/img/stefano.png') }}" alt="Simoni, Stefano">
+                        <div class="card-body">
+                            <h5 class="card-title">Simoni, Stefano</h5>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
