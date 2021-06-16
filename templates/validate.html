@@ -13,10 +13,9 @@
         </div>
         <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
             <div class="col-lg-6">
-                <form onsubmit="get_action(this);" id="validateForm">
+                <form onsubmit="get_action(this);" id="validateForm" class="was-validated">
                     <div class="form-floating mb-3">
-                        <input class="form-control" id="hash" type="text"
-                            placeholder="Enter your name..." />
+                        <input class="form-control" id="hash" type="text" required/>
                         <label for="hash">Codigo de Validación</label>
                         <div class="invalid-feedback">Ingrese el Codigo de Validación.</div>
                     </div>

@@ -13,11 +13,10 @@
         </div>
         <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
             <div class="col-lg-6">
-                <form action="{{url_for('registro')}}" method="POST" enctype="multipart/form-data" id="registerForm">
+                <form action="{{url_for('registro')}}" method="POST" enctype="multipart/form-data" id="registerForm" class="was-validated">
                     <!-- Email input-->
                     <div class="form-floating mb-3">
-                        <input class="form-control" id="inputEmail" name="email" type="text"
-                            placeholder="Enter your name..." required/>
+                        <input class="form-control" id="inputEmail" name="email" type="text" required/>
                         <label for="inputEmail">Ingrese su email.</label>
                         <div class="invalid-feedback">Un email es requerido.</div>
                     </div>
