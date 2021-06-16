@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<!-- Contact-->
+<section class="page-section bg-dark" id="register">
+    <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-lg-8 col-xl-6 text-center">
+                <h2 class="mt-0 text-white">Registro Único de Documentación</h2>
+                <hr class="divider" />
+                <p class="text-muted mb-5">Ingrese el codigo de Validación para verificar</p>
+            </div>
+        </div>
+        <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
+            <div class="col-lg-6">
+                <form onsubmit="get_action(this);" id="validateForm">
+                    <div class="form-floating mb-3">
+                        <input class="form-control" id="hash" type="text"
+                            placeholder="Enter your name..." />
+                        <label for="hash">Codigo de Validación</label>
+                        <div class="invalid-feedback">Ingrese el Codigo de Validación.</div>
+                    </div>
+            </div>
+            <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
+                <div class="col-lg-6">
+                    <div class="d-none" id="submitSuccessMessage">
+                        <div class="text-center mb-3">
+                            <div class="fw-bolder">correcto!</div>
+                        </div>
+                    </div>
+                    <div class="d-none" id="submitErrorMessage">
+                        <div class="text-center text-danger mb-3">Error al enviar el mensaje!</div>
+                    </div>
+                    <div class="d-grid">
+                        <button class="btn btn-primary btn-xl" id="submitButton" type="submit">Enviar</button>
+                    </div>
+                </div>
+            </div>
+            </form>
+        </div>
+    </div>
+    </div>
+</section>
+
+<script type="text/javascript">
+    function get_action(form) {
+        form.action = '/detalle/'+document.getElementById("hash").value;
+    }
+</script>
+
+{% endblock %}
